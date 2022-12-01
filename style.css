@@ -59,12 +59,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-li {
+.menu li {
     list-style-type: none;
     text-align: center;
 }
 
-a {
+.menu a {
     text-decoration: none;
     text-transform: uppercase;
     color: gray;
@@ -72,31 +72,22 @@ a {
 
 /* OBSAH */
 
-img {
-    width: 100%;
-    display: block;
-}
 
-.popisek {
-    color: gray;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: smaller;
-    text-align: center;
-    margin: 10px;
-}
+
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 26px;
+    margin: 20px;
 }
 
 h2::after {
     content: '';
     background-color: #629edc;
     display: block;
-    width: 125px;
-	height: 3px;
-	margin: 20px 0;
+    width: 100px;
+	height: 4px;
+	margin: 15px 0;
     position: absolute;
     left: -20px;
 }
@@ -107,7 +98,33 @@ p {
 
 /* FOTOGALERIE */
 
+img {
+    width: 100%;
+    display: block;
+}
 
+.popisek,
+.popisek a,
+.popisek-copy {
+    color: rgb(160, 160, 160);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    margin: 10px 0;
+}
 
+.galerie .popisek {
+    font-weight: bold;
+}
+
+.galerie span {
+    font-weight: normal;
+}
 
 /* PATICKA */
+
+.paticka,
+.paticka a {
+    color: rgb(160, 160, 160);
+    font-size: 12px;
+}
