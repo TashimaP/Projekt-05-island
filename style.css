@@ -30,6 +30,7 @@ body {
     background-position: center;
     color: #f5f5f5;
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.50) 0px -20px 36px -28px inset;
 }
 
 .titulek {
@@ -47,38 +48,64 @@ body {
     opacity: 80%;
     display: block;
     justify-content: center;
-    width: 100px;
-	height: 2px;
+    width: 80px;
+	height: 2.5px;
     position: relative;
     margin: 0 auto 15px;
 }
 
 /* MENU */
 
-.menu {
-    font-family: Arial, Helvetica, sans-serif;
+.menu  {
+    padding: 30px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .menu li {
-    list-style-type: none;
+    border-bottom: rgba(0, 0, 0, 0.10) solid 0.5px;
+    padding: 10px;
     text-align: center;
+    list-style: none;
 }
 
 .menu a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
-    color: gray;
+    color: rgba(0, 0, 0, 0.20); 
+    font-weight: bold;
+}
+
+@media (min-width: 540px) {
+
+    .menu {
+        flex-direction: row;
+    }
+
+    .menu li {
+        flex-basis: 25%;
+        border: rgba(0, 0, 0, 0.10) solid 0.5px;
+        border-right: none;
+    }
+
+    #menu-uvod {
+        border-left: none;
+      }
+}
+
+@media (min-width: 960px) {
+
 }
 
 /* OBSAH */
 
-
-
-
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 26px;
-    margin: 20px;
+    margin: 40px 20px;
 }
 
 h2::after {
@@ -96,21 +123,49 @@ p {
     margin: 20px;
 }
 
-/* FOTOGALERIE */
-
 img {
     width: 100%;
     display: block;
 }
 
+.obrazek {
+    padding: 20px 0 10px;
+}
+
 .popisek,
 .popisek a,
 .popisek-copy {
-    color: rgb(160, 160, 160);
+    color:  rgba(0, 0, 0, 0.40);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
+    line-height:normal;
     text-align: center;
-    margin: 10px 0;
+    margin: 10px 0 20px;
+}
+
+@media (min-width: 540px) {
+
+    .obrazek {
+        position: relative;
+    }
+
+    .obrazek .popisek {
+        color: white;
+        position: absolute;
+        bottom: 0px;
+        right: 10px;
+    }
+
+    .popisek a {
+        color: white;
+    }
+}
+
+/* FOTOGALERIE */
+
+img {
+    width: 100%;
+    display: block;
 }
 
 .galerie .popisek {
@@ -123,7 +178,12 @@ img {
 
 /* PATICKA */
 
-.paticka,
+.paticka {
+    color: rgb(160, 160, 160);
+    font-size: 12px;
+    box-shadow: rgba(0, 0, 0, 0.40) 0px 20px 36px -28px inset;
+}
+
 .paticka a {
     color: rgb(160, 160, 160);
     font-size: 12px;
