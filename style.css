@@ -178,12 +178,46 @@ img {
     font-weight: normal;
 }
 
+@media (min-width: 500px) {
+
+    .galerie {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .foto {
+        flex-basis: 50%;
+        transition: 0.3s;
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .galerie .popisek {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.50);
+        color: #f5f5f5;
+        transition: 0.3s;
+        position: absolute;
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .galerie .popisek-copy {
+        color: #f5f5f5;
+    }
+
+    .foto:hover .popisek {
+        transform: translateY(-100%);
+    }
+}
+
 /* PATICKA */
 
 .paticka {
     color: rgb(160, 160, 160);
     font-size: 12px;
-    box-shadow: rgba(0, 0, 0, 0.40) 0px 20px 36px -28px inset;
+    box-shadow: rgba(0, 0, 0, 0.60) 0px 20px 36px -28px inset;
     padding: 20px 0 0;
 }
 
