@@ -57,19 +57,6 @@ body {
     margin: 0 auto 15px;
 }
 
-@media (min-width: 1000px) {
-
-    .autor {
-        margin-bottom: 105px;
-    }
-
-    .perex {
-        width: 700px;
-        margin: auto;
-    }
-
-}
-
 /* MENU */
 
 .menu  {
@@ -95,42 +82,13 @@ body {
     font-weight: bold;
 }
 
-@media (min-width: 500px) and (max-width: 999px) {
-
-    .menu {
-        flex-direction: row;
-    }
-
-    .menu li {
-        flex-basis: 25%;
-        border: rgba(0, 0, 0, 0.10) solid 0.5px;
-        border-right: none;
-    }
-
-    #menu-uvod {
-        border-left: none;
-    }
-}
-
-@media (min-width: 1000px) {
-
-    .menu {
-        float: left;
-        width: 25%;
-
-    }
-
-    .menu li {
-        text-align: left;
-    }
-}
-
 /* OBSAH */
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 26px;
     margin: 20px 20px 40PX;
+    position: relative;
 }
 
 h2::after {
@@ -168,8 +126,37 @@ img {
     margin: 10px 0 20px;
 }
 
-@media (min-width: 500px) {
+/* FOTOGALERIE */
 
+img {
+    width: 100%;
+    display: block;
+}
+
+.galerie .popisek {
+    font-weight: bold;
+}
+
+.galerie span {
+    font-weight: normal;
+}
+
+/* PATICKA */
+
+.paticka {
+    color: rgb(160, 160, 160);
+    font-size: 12px;
+    box-shadow: rgba(0, 0, 0, 0.60) 0px 20px 36px -28px inset;
+    padding: 20px 0 0;
+}
+
+.paticka a {
+    color: rgb(160, 160, 160);
+    font-size: 12px;
+}
+
+@media (min-width: 500px) {
+    
     .obrazek {
         position: relative;
     }
@@ -186,48 +173,6 @@ img {
     .popisek a {
         color: white;
     }
-}
-
-@media (min-width: 1000px) {
-
-    .stranka {
-        width: 960px;
-        background-color: white;
-        margin: auto;
-        margin-top: -60px;
-        box-shadow: rgba(0, 0, 0, 0.40) 0px 5px 15px; ;
-    }
-
-    .uvod p {
-        padding-left: 25%  ;
-        margin: 40px;
-    }
-
-    .proc p {
-        padding-right: 25%;
-    }
-
-    .co p, .co h2 {
-        padding-left: 25%;
-    }
-}
-
-/* FOTOGALERIE */
-
-img {
-    width: 100%;
-    display: block;
-}
-
-.galerie .popisek {
-    font-weight: bold;
-}
-
-.galerie span {
-    font-weight: normal;
-}
-
-@media (min-width: 500px) {
 
     .galerie {
         display: flex;
@@ -269,28 +214,69 @@ img {
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 500px) and (max-width: 999px) {
 
-    .foto {
-        flex-basis: 33.334%;
+    .menu {
+        flex-direction: row;
+    }
+
+    .menu li {
+        flex-basis: 25%;
+        border: rgba(0, 0, 0, 0.10) solid 0.5px;
+        border-right: none;
+    }
+
+    #menu-uvod {
+        border-left: none;
     }
 }
 
-/* PATICKA */
-
-.paticka {
-    color: rgb(160, 160, 160);
-    font-size: 12px;
-    box-shadow: rgba(0, 0, 0, 0.60) 0px 20px 36px -28px inset;
-    padding: 20px 0 0;
-}
-
-.paticka a {
-    color: rgb(160, 160, 160);
-    font-size: 12px;
-}
-
 @media (min-width: 1000px) {
+    
+    .autor {
+        margin-bottom: 105px;
+    }
+
+    .perex {
+        width: 700px;
+        margin: auto;
+    }
+
+    
+    .menu {
+        float: left;
+        width: 25%;
+
+    }
+
+    .menu li {
+        text-align: left;
+    }
+
+        .stranka {
+        width: 960px;
+        background-color: white;
+        margin: auto;
+        margin-top: -60px;
+        box-shadow: rgba(0, 0, 0, 0.40) 0px 5px 15px; ;
+    }
+
+    .uvod p {
+        padding-left: 25%  ;
+        margin: 40px;
+    }
+
+    .proc p {
+        padding-right: 25%;
+    }
+
+    .co p, .co h2 {
+        padding-left: 25%;
+    }
+
+     .foto {
+        flex-basis: 33.334%;
+    }
 
     .paticka {
         width: 960px;
